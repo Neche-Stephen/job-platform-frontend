@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JobConnectSE connects companies in Southeast Nigeria with local tech talent." />
+  <title>JobConnectSE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-black text-yellow-400 font-sans">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const Header = () => (
+      <header className="flex justify-between items-center p-4 bg-black text-yellow-400">
+        <h1 className="text-2xl font-bold">JobConnectSE</h1>
+        <nav className="space-x-4">
+          <a href="#" className="hover:underline">Home</a>
+          <a href="#about" className="hover:underline">About</a>
+          <a href="#how" className="hover:underline">How It Works</a>
+          <a href="#contact" className="hover:underline">Contact</a>
+          <a href="#signin" className="hover:underline">Sign In</a>
+          <a href="#signup" className="hover:underline">Sign Up</a>
+        </nav>
+      </header>
+    );
+
+    const Hero = () => (
+      <section className="text-center py-20 bg-yellow-400 text-black">
+        <h2 className="text-4xl font-bold mb-4">Connecting Southeast Nigeria’s Companies with Tech Talent from south east</h2>
+        <p className="mb-6">Find the right opportunities or candidates in one place.</p>
+        <div className="space-x-4">
+          <button className="bg-black text-yellow-400 px-4 py-2 rounded">Post a Job</button>
+          <button className="bg-black text-yellow-400 px-4 py-2 rounded">Find a Job</button>
+        </div>
+      </section>
+    );
+
+    const About = () => (
+      <section id="about" className="p-8 bg-black text-yellow-400">
+        <h3 className="text-2xl font-bold mb-2">About JobConnectSE</h3>
+        <p>
+          JobConnectSE is dedicated to empowering tech talent in Southeast Nigeria by
+          connecting them with local companies. Our platform bridges the gap and
+          fosters growth in the regional tech ecosystem.
+        </p>
+      </section>
+    );
+
+    const HowItWorks = () => (
+      <section id="how" className="p-8 bg-yellow-400 text-black">
+        <h3 className="text-2xl font-bold mb-4">How It Works</h3>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="text-center">
+            <div className="text-5xl mb-2">1</div>
+            <p>Create your profile</p>
+          </div>
+          <div className="text-center">
+            <div className="text-5xl mb-2">2</div>
+            <p>Post or apply for jobs</p>
+          </div>
+          <div className="text-center">
+            <div className="text-5xl mb-2">3</div>
+            <p>Connect and grow</p>
+          </div>
+        </div>
+      </section>
+    );
+
+    const Benefits = () => (
+      <section className="p-8 bg-black text-yellow-400">
+        <h3 className="text-2xl font-bold mb-4">Why Choose JobConnectSE?</h3>
+        <ul className="list-disc list-inside">
+          <li>Reach local talent quickly</li>
+          <li>Quality candidates from the region</li>
+          <li>Showcase your portfolio and skills</li>
+          <li>Targeted job matches</li>
+        </ul>
+      </section>
+    );
+
+    const Footer = () => (
+      <footer id="contact" className="p-4 bg-yellow-400 text-black text-center">
+        <p>Contact us: info@jobconnectse.com</p>
+        <div className="space-x-4">
+          <a href="#" className="hover:underline">Terms of Use</a>
+          <a href="#" className="hover:underline">Privacy Policy</a>
+        </div>
+      </footer>
+    );
+
+    const App = () => (
+      <div>
+        <Header />
+        <Hero />
+        <About />
+        <HowItWorks />
+        <Benefits />
+        <Footer />
+      </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
