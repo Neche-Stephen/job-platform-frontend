@@ -1,10 +1,12 @@
 # JobConnectSE Frontend
 
-This repository contains a simple landing page for **JobConnectSE**, a platform connecting companies in Southeast Nigeria with local tech talent.
+This repository contains a simple landing page for **JobConnectSE**, a platform
+connecting companies in Southeast Nigeria with local tech talent.
 
 ## Getting Started
 
-Open `index.html` in your web browser to view the landing page. The page is built with React and TailwindCSS via CDN links, so no build steps are required.
+Run `npm install` to install dependencies and then start the development server
+with `npm run dev`.
 
 ## Features
 
