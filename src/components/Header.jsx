@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ onPostJobClick }) {
   return (
     <header className="flex justify-between items-center p-4 bg-black text-yellow-400">
       <h1 className="text-2xl font-bold">JobConnectSE</h1>
@@ -8,6 +8,7 @@ export default function Header() {
         <a href="#how" className="hover:underline">How It Works</a>
         <a href="#contact" className="hover:underline">Contact</a>
         <a href="#signin" className="hover:underline">Sign In</a>
+        <button onClick={onPostJobClick} className="hover:underline">Post a Job</button>
         <a href="#signup" className="hover:underline">Sign Up</a>
       </nav>
     </header>
