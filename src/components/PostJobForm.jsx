@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-export default function PostJobForm({ onBack }) {
+export default function PostJobForm() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     jobTitle: '',
     companyName: '',
@@ -57,7 +59,7 @@ export default function PostJobForm({ onBack }) {
         <h2 className="text-2xl font-bold mb-4">Job Posted Successfully!</h2>
         <button
           className="bg-black text-yellow-400 px-4 py-2 rounded"
-          onClick={onBack}
+          onClick={() => navigate('/')}
         >
           Back to Home
         </button>
@@ -228,7 +230,7 @@ export default function PostJobForm({ onBack }) {
           <button
             type="button"
             className="border border-yellow-400 text-yellow-400 px-4 py-2 rounded"
-            onClick={onBack}
+            onClick={() => navigate('/')}
           >
             Cancel
           </button>
