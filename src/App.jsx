@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,32 +6,29 @@ import Benefits from './components/Benefits'
 import Footer from './components/Footer'
 import PostJobForm from './components/PostJobForm'
 import BrowseJobs from './components/BrowseJobs'
+import { Routes, Route } from 'react-router-dom'
+
+function Home() {
+  return (
+    <>
+      <Hero />
+      <About />
+      <HowItWorks />
+      <Benefits />
+      <Footer />
+    </>
+  )
+}
 
 export default function App() {
-  const [page, setPage] = useState('home')
-
   return (
     <div>
-      <Header
-        onPostJobClick={() => setPage('post')}
-        onBrowseJobsClick={() => setPage('browse')}
-        onHomeClick={() => setPage('home')}
-      />
-
-      {page === 'post' && <PostJobForm onBack={() => setPage('home')} />}
-      {page === 'browse' && <BrowseJobs />}
-      {page === 'home' && (
-        <>
-          <Hero
-            onPostJob={() => setPage('post')}
-            onFindJob={() => setPage('browse')}
-          />
-          <About />
-          <HowItWorks />
-          <Benefits />
-          <Footer />
-        </>
-      )}
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/browse" element={<BrowseJobs />} />
+        <Route path="/post" element={<PostJobForm />} />
+      </Routes>
     </div>
   )
 }
